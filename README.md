@@ -1,4 +1,4 @@
-# 🍃 Mineleaf Network Discord Bot
+#  Discord Bot
 
 An enterprise-grade, high-performance, asynchronous Discord application crafted using `discord.py` (v2.0+) and Python 3.10+. This specialized system offers a fully unified solution tailored for Minecraft communities, combining an interactive multi-category ticket engine, dynamic staff recruitment applications, robust server moderation commands, automatic profanity scrubbing, visual payment-gateway embedded storefront interfaces, and live real-time server tracking loops.
 
@@ -7,11 +7,11 @@ An enterprise-grade, high-performance, asynchronous Discord application crafted 
 ## 📑 Table of Contents
 1. [Core Architectural Overview](#-core-architectural-overview)
 2. [Detailed Feature Breakdown](#-detailed-feature-breakdown)
-   - [Advanced Ticketing & Transcripts](#1-advanced-ticketing--transcripts)
-   - [Staff Recruitment Pipeline](#2-staff-recruitment-pipeline)
-   - [Automated Chat Moderation & Filtering](#3-automated-chat-moderation--filtering)
-   - [Server Status Tracking Engine](#4-server-status-tracking-engine)
-   - [Branded Store Layout & Gateway Routing](#5-branded-store-layout--gateway-routing)
+- [Advanced Ticketing & Transcripts](#1-advanced-ticketing--transcripts)
+- [Staff Recruitment Pipeline](#2-staff-recruitment-pipeline)
+- - [Automated Chat Moderation & Filtering](#3-automated-chat-moderation--filtering)
+- [Server Status Tracking Engine](#4-server-status-tracking-engine)
+ - [Branded Store Layout & Gateway Routing](#5-branded-store-layout--gateway-routing)
 3. [🔥 New Features Added](#-new-features-added)
 4. [🛠️ Source Code Configuration Map (Line-by-Line Guide)](#%EF%B8%8F-source-code-configuration-map-line-by-line-guide)
 5. [⚙️ Administrative Commands & Runtime Modifiers](#%EF%B8%8F-administrative-commands--runtime-modifiers)
@@ -118,6 +118,49 @@ You no longer have to hardcode changes into the file structure when tweaking liv
 | `!setticketicon` | `<image_url>` | Rewrites corner graphic URLs for active support embeds. | Hardcoded Default Asset |
 | `!setstaffrole` | `<role_id>` | Binds application ping actions to designated HR roles. | `None` |
 | `!status` | None | Triggers an immediate, forced status check on the server network. | Real-time Execution |
+
+
+---
+
+## 🔥 Key Features
+
+### 🎫 Advanced Interactive Ticketing System
+* **Categorized Tickets:** Users can create tickets through an interactive dropdown select menu covering **General Support**, **Ban/Unban Reports**, **Store**, **Staff Applications**, and **Reporting Players**.
+* **Role Integration:** Dynamically assigns permission overwrites to designated support roles based on the specific category chosen.
+* **Staff Control Panel:** Interactive claim buttons (`✋`) and lock/close buttons (`🔒`) built into the ticket channels to streamline staff actions.
+* **Auto Transcripts:** Automatically generates a text file backup of the channel's message history and sends an embed to the user upon ticket closure.
+* **Duplication Prevention:** Restricts users from cluttering the server by enforcing a strict one-active-ticket-at-a-time rule.
+
+### 🛡️ Robust Moderation Engine (Slash Commands)
+* `/ban`: Ban malicious members with real-time role hierarchy checks to secure administrative safety.
+* `/unban`: Revoke permanent bans safely utilizing distinct numeric user IDs.
+* `/mute`: Temporarily timeout users for a customizable duration using Discord's modern native integration.
+* `/unmute`: Lift active timeouts effortlessly.
+* **Central Log Mapping:** All moderation protocols compile structured log profiles inside your specific staff monitoring logs channel.
+
+### 🛒 Dynamic Shop Interface & Assets
+* Features a visually optimized embed layout showcasing ranks (e.g., *MLOP+*, *Titan*, *Phoenix*) with integrated region pricing across INR and NPR currencies.
+* Interactive `🎟️ Ticket` interface button attached to the store configuration for quick purchase routing.
+
+### 📋 Interactive Staff Recruitment System
+* Modern `discord.ui.Modal` application structure prompts candidates for credentials securely (Age, Region, Professional Background, and Motivation Statement).
+* Routes completed profiles straight to separate private channel queues for the Human Resources division to assess.
+
+### 🧹 Automated Chat Protection & Filters
+* **Automated Word Guard:** Listens for blacklisted profanities or slurs and checks message context filters.
+* **Link Filter Monitoring:** Powered by regex compile protocols targeting dynamic `discord.gg` links or raw web domain invites.
+
+### 📈 Automatic Live Server Monitoring
+* Built on top of `discord.ext.tasks`, a repeating background thread tracks your physical Minecraft server host address (`play.mineleaf.fun`), keeping community counters informed.
+
+---
+
+## 🛠️ Configuration & Environment Setup
+
+The bot depends on safe environment parameters to hide secure tokens and custom category IDs. Create a `.env` file in your root folder:
+
+```env
+DISCORD_TOKEN=your_secure_bot_token_here
 
 ---
 
