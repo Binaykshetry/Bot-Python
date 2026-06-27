@@ -1,4 +1,4 @@
-# 🍃 Mineleaf Network Discord Bot
+# 🍃 Discord Bot
 
 A multi-purpose, feature-rich Discord bot built using `discord.py` to seamlessly handle ticketing, server moderation, interactive store listings, staff applications, automated text moderation, and live Minecraft server status tracking for the Mineleaf Network.
 
